@@ -22,7 +22,7 @@ class MedicineAnalyzerApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Medicine Analyzer',
+      title: 'Medicine Scanner',
       theme: ThemeData(
         primarySwatch: Colors.teal,
         useMaterial3: true,
