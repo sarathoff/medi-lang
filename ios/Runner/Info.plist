@@ -3,6 +3,14 @@
 <plist version="1.0">
 <dict>
     <key>NSCameraUsageDescription</key>
+    <string>This app needs camera access to scan medicines.</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>This app needs photo library access to select medicine images.</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Microphone access is not required for this app.</string> <!-- Still good practice to include, even if unused -->
+    <key>NSAppTransportSecurity</key> <!-- If needed for HTTP calls on older iOS -->
+    <key>NSAllowsArbitraryLoads</key>
+    <key>NSCameraUsageDescription</key>
     <string>This app needs camera access to take pictures of medicines for analysis.</string>
     <key>NSPhotoLibraryUsageDescription</key>
     <string>This app needs access to your photo library to upload medicine images.</string>
