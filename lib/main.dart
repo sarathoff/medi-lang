@@ -561,24 +561,14 @@ class _MedicineAnalyzerScreenState extends State<MedicineAnalyzerScreen> with Si
 
       final model = GenerativeModel(model: 'gemini-2.0-flash', apiKey: apiKey);
 
-      final promptLanguage = _getLanguageName(_selectedLocale);
       // Refined Prompt
       final prompt = TextPart(
-          "You are an AI assistant specialized in explaining medicine information (from images of prescriptions, packaging, or medical reports) in extremely simple terms for people with limited literacy. Analyze the provided image.\n\n"
-          "**Output Language:** Strictly use **$promptLanguage** for your entire response.\n\n"
-          "**Focus ONLY on:**\n"
-          "1.  **Name:** Identify the medicine/test name(s).\n"
-          "2.  **Purpose:** Explain *why* it's used (e.g., 'for pain', 'for fever', 'checks blood sugar') in basic $promptLanguage words.\n"
-          "3.  **Simple Instructions/Warnings:** Mention critical, easily visible instructions like 'take with food', 'external use only', or warnings ONLY if very clear. Use simple $promptLanguage phrasing.\n\n"
-          "**Rules:**\n"
-          "*   Use very simple, short sentences in $promptLanguage.\n"
-          "*   Avoid ALL medical jargon and complex terms.\n"
-          "*   Use bullet points (using '-') or numbered lists if multiple items are clear.\n"
-          "*   If the image is blurry, unclear, or doesn't show medicine/medical info, state clearly in $promptLanguage: 'Image is unclear or does not show medicine information.'\n"
-          "*   **DO NOT GUESS DOSAGE.** Only mention dosage if it's exceptionally prominent and simple (e.g., 'One tablet'). If unsure, omit it.\n"
-          "*   **DO NOT provide medical advice.**\n"
-          "*   Respond ONLY with plain text in $promptLanguage. No markdown like '*' or '_'.\n"
-          "*   **ALWAYS** end your response with this exact sentence in $promptLanguage: 'This is for understanding only. Always follow your doctor’s advice.'");
+            "You are an AI assistant designed to explain medicine prescriptions or medical reports in the simplest and most understandable way possible, especially for individuals with limited education or literacy.\n\nAnalyze the image of medicine or prescription and provide information in ${tamil}. Focus on:\n\n1. The name of the medicine or test shown in the image\n2. What the medicine is used for, or what the test measures\n3. Important information about usage or purpose\n\nWrite in simple, direct language that anyone can understand. Avoid medical jargon. Format your response as readable text with appropriate line breaks between sections. Do not use JSON formatting.\n\nRemember to emphasize that this is general information only and not a substitute for a doctor's advice"
+            "1. The name of the medicine or test shown in the image\n"
+            "2. What the medicine is used for, or what the test measures\n"
+            "3. Important information about usage or purpose\n\n"
+            "Write in simple, direct language that anyone can understand. Avoid medical jargon. Format your response as readable text with appropriate line breaks between sections. Do not use JSON formatting.\n\n"
+            "Remember to emphasize that this is general information only and not a substitute for a doctor's advice.");
 
 
       final imagePart = DataPart('image/jpeg', imageBytes);
