@@ -1,5 +1,5 @@
-name: medicine_analyzer
-description: A Flutter application to scan and analyze medicines using AI.
+name: medilang
+description: A new Flutter project.
 publish_to: 'none'
 version: 1.0.0+1
 
