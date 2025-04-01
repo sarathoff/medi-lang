@@ -1,6 +1,6 @@
 {
-    "name": "mescan",
-    "short_name": "mescan",
+    "name": "MediLang",
+    "short_name": "MediLang",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
