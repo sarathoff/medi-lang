@@ -268,7 +268,7 @@ class _MedicineAnalyzerAppState extends State<MedicineAnalyzerApp> {
     );
 
     return MaterialApp(
-      title: 'MediLang',
+      title: 'MediLang', // Updated app name
       debugShowCheckedModeBanner: false,
       theme: lightTheme,
       darkTheme: darkTheme,
@@ -670,7 +670,7 @@ class _MedicineAnalyzerScreenState extends State<MedicineAnalyzerScreen> with Si
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
+    // Removed unused variable 'theme'
     final screenWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
